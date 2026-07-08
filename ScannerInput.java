@@ -7,9 +7,12 @@ public class ScannerInput {
         try{
             File file = new File("D:\\Test files\\Textfile.txt.txt");
             Scanner sc = new Scanner(file);
+            String text = "";
             while(sc.hasNext()){
-                System.out.println(sc.nextLine());
+                text+=sc.nextLine();
+                //System.out.println(sc.nextLine());
             }
+            System.out.println(text);
             sc.close();
         }catch(IOException e){
             System.out.println("error : "+e.getMessage());
